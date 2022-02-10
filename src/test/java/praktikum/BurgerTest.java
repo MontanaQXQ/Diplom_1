@@ -1,18 +1,13 @@
 package praktikum;
 
-import static org.junit.Assert.*;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
@@ -61,7 +56,7 @@ public class BurgerTest {
         Mockito.when(mockIngredient.getPrice()).thenReturn(300F);
         burger.setBuns(mockBun);
         burger.addIngredient(mockIngredient);
-        assertEquals(500, burger.getPrice(), 0);
+        assertEquals(500, burger.getPrice(),0);
         /*
         burger.setBuns(new Bun("red bun", 300));
         burger.addIngredient(new Ingredient(IngredientType.SAUCE, "sour cream", 200));
@@ -72,8 +67,15 @@ public class BurgerTest {
     @Test
     public void getBurgerReceiptTest() {
         Burger burger = new Burger();
-
-
+        burger.setBuns(mockBun);
+        burger.addIngredient(mockIngredient);
+        Mockito.when(mockBun.getName()).thenReturn("red bun");
+        Mockito.when(mockBun.getPrice()).thenReturn(100f);
+        Mockito.when(mockIngredient.getType()).thenReturn(IngredientType.FILLING);
+        Mockito.when(mockIngredient.getName()).thenReturn("cutlet");
+        Mockito.when(mockIngredient.getPrice()).thenReturn(300f);
+        String expected = "(==== red bun ====)" + "\r\n" + "= filling cutlet =" + "\r\n" + "(==== red bun ====)" +"\r\n" +"\r\n" + "Price: 500,000000\r\n";
+        assertEquals(expected, burger.getReceipt());
     }
 
 }
