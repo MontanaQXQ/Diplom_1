@@ -57,11 +57,7 @@ public class BurgerTest {
         burger.setBuns(mockBun);
         burger.addIngredient(mockIngredient);
         assertEquals(500, burger.getPrice(),0);
-        /*
-        burger.setBuns(new Bun("red bun", 300));
-        burger.addIngredient(new Ingredient(IngredientType.SAUCE, "sour cream", 200));
-        burger.addIngredient(new Ingredient(IngredientType.FILLING, "dinosaur", 200));
-        */
+
     }
 
     @Test
