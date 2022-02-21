@@ -40,6 +40,7 @@ public class BurgerTest {
         assertEquals(0, burger.ingredients.size());
     }
 
+
     @Test
     public void ingredientMovedBurgerTest() {
         Burger burger = new Burger();

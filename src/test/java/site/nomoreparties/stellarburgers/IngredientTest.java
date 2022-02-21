@@ -20,6 +20,7 @@ public class IngredientTest {
         assertEquals("hot sauce", ingredient.getName());
 
     }
+
     @Test
     public void ingredientGetTypeTest() {
 
