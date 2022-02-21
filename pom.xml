@@ -41,12 +41,6 @@
             <version>1.11.16</version>
         </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>compile</scope>
-        </dependency>
 
         <!-- модуль взаимодействия Allure и Junit -->
         <dependency>
