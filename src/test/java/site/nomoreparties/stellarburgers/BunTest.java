@@ -1,4 +1,4 @@
-package praktikum;
+package site.nomoreparties.stellarburgers;
 
 
 import org.junit.Test;
