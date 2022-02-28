@@ -25,8 +25,8 @@ public class IngredientTypeTest {
     }
 
     @Test
-    public void ingridientTypeParamTest(){
+    public void ingridientTypeParamTest() {
         int actualNumber = IngredientType.valueOf(IngredientType.class, type).ordinal();
-        Assert.assertEquals(expectedNumber, actualNumber);
+        Assert.assertEquals("Value of Ingredients didn't match", expectedNumber, actualNumber);
     }
 }
